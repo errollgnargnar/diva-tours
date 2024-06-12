@@ -41,6 +41,7 @@ diva-bali-journey/
    git clone https://github.com/yourusername/diva-bali-journey.git
    cd diva-bali-journey
    ```
+   then run a live server
 
 2. **Modify Email Settings**:
    - Update the `contact-form.php` file with the correct email address and other configurations.
