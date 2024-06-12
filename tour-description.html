@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- TITLE -->
-    <title>ATV Driving - Travi Tour Guide And Excursions HTML Template</title>
+    <title>Dali Excursions - Bali Tour Guide And Excursions</title>
 
     <!--  FAVICON  -->
     <link rel="shortcut icon" href="images/icons/favicon.png">
@@ -62,7 +62,7 @@
                             <a href="#" class="nav-item nav-link" data-toggle="dropdown">TOURS</a>
                             <div class="dropdown-menu">
                                 <a href="tours.html" class="dropdown-item">Tour List</a>
-                                <a href="tour-description.html" class="dropdown-item">Tour Descripcion</a>
+                                <a href="tour-description.html" class="dropdown-item">Tour Description</a>
                             </div>
                         </li>
                         <li class="dropdown">
@@ -95,7 +95,7 @@
         <div class="pages-hero atv-activity">
             <div class="container">
                 <div class="pages-title">
-                    <h1>ATV Adventure <br>in Bavaro</h1>
+                    <h1>Bali Tour Guide<br>And Excursions</h1>
                 </div>
             </div>
         </div>
@@ -121,24 +121,16 @@
             </div>
 
             <div class="activity-description">
-                <p>Boundless Boat Charters' family-friendly fishing excursions are<strong> limited to four
-                        passengers</strong>,
-                    meaning there's plenty of space for everyone to comfortably reel in their catch. The company runs
-                    morning
-                    and afternoon trips that last 5 1/2 hours (perfect for first-timers or young anglers), nine-hour
-                    trips
-                    offshore or to Mexico's Coronado Islands, and a full-day (12-hour) deep-sea fishing outing.</p>
-                <p>Coletta Sportfishing offers daily private charters on both its boats. Coletta is family-friendly
-                    and caters to all experience levels; the captain and crew will teach young and first-time anglers
-                    the basics of sportfishing. Outings range from half-day trips (5 1/2 hours) to full-day (12-hour)
-                    charters. </p>
+                <p>Explore Bali with Diva's exclusive tours, which are <strong>limited to small groups</strong> to ensure a personalized and comfortable experience for everyone. Choose from a variety of excursions including half-day tours (4 hours), full-day tours (8 hours), and specialized cultural immersions. Whether you're a first-time visitor or a seasoned traveler, each tour is designed to showcase the best of Bali's natural beauty, rich culture, and hidden gems.</p>
+                <p>Diva Bali Journey offers daily private tours tailored to your interests and experience levels. Whether you're keen on exploring Bali's stunning beaches, ancient temples, or vibrant local markets, our guides will ensure you have an unforgettable experience. Outings range from half-day explorations to full-day adventures, providing a comprehensive view of Bali's diverse attractions.</p>
             </div>
+            
 
             <div class="row mt-4">
                 <div class="col-lg-8">
                     <h3>Book Your Trip Now</h3>
                     <br>
-                    <form id="contact-form" method="post" action="contact.php">
+                    <form id="contact-form">
                         <div class="messages"></div>
                         <div class="controls">
                             <div class="row">
@@ -151,14 +143,6 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input id="form_email" type="email" name="email"
-                                            class="form-control custom-form" placeholder="*Email address"
-                                            required="required" data-error="Valid email is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
                                         <input id="form_phone" type="tel" name="phone" class="form-control custom-form"
                                             placeholder="*Please enter your phone">
                                         <div class="help-block with-errors"></div>
@@ -169,7 +153,7 @@
                                         <textarea id="form_message" name="message"
                                             class="form-control message-form custom-form" placeholder="*Your message"
                                             rows="6" required="required"
-                                            data-error="Please,leave us a message."></textarea>
+                                            data-error="Please, leave us a message."></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -177,7 +161,7 @@
                             <br />
                             <div class="row">
                                 <div class="col-md-12 btn-send">
-                                    <p><input type="submit" class="btn btn-default" value="Send message"></p>
+                                    <p><button type="button" class="btn btn-default" onclick="sendWhatsAppMessage()">Send message</button></p>
                                 </div>
                                 <div class="col-sm-12">
                                     <p class="required">
@@ -187,6 +171,7 @@
                             </div>
                         </div>
                     </form>
+                    
                 </div>
 
                 <div class="col-lg-4 spacing-md">
@@ -325,7 +310,21 @@
     <script src="js/lib/nav.fixed.top.js"></script>
     <script src="js/lib/contact.js"></script>
     <script src="js/main.js"></script>
+     <!-- WHATSAPP SCRIPT -->
+     <script>
+        function sendWhatsAppMessage() {
+            var name = document.getElementById('form_name').value;
+            var phone = document.getElementById('form_phone').value;
+            var message = document.getElementById('form_message').value;
+    
+            var whatsappMessage = `Name: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+            var whatsappUrl = `https://wa.me/6282844696409?text=${whatsappMessage}`;
+    
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
     <!-- JAVASCRIPTS END -->
+
 
 </body>
 
